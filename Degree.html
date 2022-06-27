@@ -1,0 +1,312 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="SHORTCUT ICON" href="assets/img/logoGTU.ico" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="author" content="Dashboard" /><meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" /><title>
+	Student Profile @ GTU
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--external css-->
+		<script src="https://kit.fontawesome.com/795b1be607.js" crossorigin="anonymous"></script>
+    <link href="https://student.gtu.ac.in/assets/font-awesome/css/font-awesome.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="https://student.gtu.ac.in/assets/css/zabuto_calendar.css" /><link rel="stylesheet" type="text/css" href="https://student.gtu.ac.in/assets/js/gritter/css/jquery.gritter.css" /><link rel="stylesheet" type="text/css" href="https://student.gtu.ac.in/assets/lineicons/style.css" />
+    <!-- Custom styles for this template -->
+    <link href="https://student.gtu.ac.in/assets/css/style.css" rel="stylesheet" /><link href="https://student.gtu.ac.in/assets/css/style-responsive.css" rel="stylesheet" />
+    <script src="https://student.gtu.ac.in/assets/js/jquery-1.8.3.min.js" />
+
+    <script type="text/javascript">
+        window.oncontextmenu = function () {
+            return false;
+        }
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) {
+                return false;
+
+            }
+
+            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74) || (event.ctrlKey && event.keyCode == 85)) {
+
+                return false;
+
+            }
+
+
+        });
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="style/site.css" />
+           <link rel="Stylesheet" href="Style/rescss_min.css" type="text/css" />
+    <link href="assets/css/style-responsive.css" rel="stylesheet" type="text/css" />
+                <style type="text/css">
+        .myTable
+        {
+            /*background-color: #eee;*/
+            border-collapse: collapse;
+            color: #000000;
+            text-align: left;
+        }
+        .myTable th
+        {
+            /* background-color: #000;*/
+            color: White;
+        }
+        .myTable td, .myTable th
+        {
+            padding: 3px;
+
+        }
+    </style>
+ </head>
+<body>
+    <form name="aspnetForm" method="post" action="./Degree.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDM0MTM4ODYxD2QWAmYPZBYCAgMPZBYEAgMPZBYUAgEPDxYCHgRUZXh0BQwyMDY0MDAzMTkyMTVkZAIDDw8WBB4ISW1hZ2VVcmwFyj9kYXRhOmltYWdlL2pwZztiYXNlNjQsLzlqLzRBQVFTa1pKUmdBQkFRRUFZQUJnQUFELzJ3QkRBQWdHQmdjR0JRZ0hCd2NKQ1FnS0RCUU5EQXNMREJrU0V3OFVIUm9mSGgwYUhCd2dKQzRuSUNJc0l4d2NLRGNwTERBeE5EUTBIeWM1UFRneVBDNHpOREwvMndCREFRa0pDUXdMREJnTkRSZ3lJUndoTWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qSXlNakl5TWpJeU1qTC93QUFSQ0FESUFLQURBU0lBQWhFQkF4RUIvOFFBSHdBQUFRVUJBUUVCQVFFQUFBQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkFBQWdFREF3SUVBd1VGQkFRQUFBRjlBUUlEQUFRUkJSSWhNVUVHRTFGaEJ5SnhGREtCa2FFSUkwS3h3UlZTMGZBa00ySnlnZ2tLRmhjWUdSb2xKaWNvS1NvME5UWTNPRGs2UTBSRlJrZElTVXBUVkZWV1YxaFpXbU5rWldabmFHbHFjM1IxZG5kNGVYcURoSVdHaDRpSmlwS1RsSldXbDVpWm1xS2pwS1dtcDZpcHFyS3p0TFcydDdpNXVzTER4TVhHeDhqSnl0TFQxTlhXMTlqWjJ1SGk0K1RsNXVmbzZlcng4dlAwOWZiMytQbjYvOFFBSHdFQUF3RUJBUUVCQVFFQkFRQUFBQUFBQUFFQ0F3UUZCZ2NJQ1FvTC84UUF0UkVBQWdFQ0JBUURCQWNGQkFRQUFRSjNBQUVDQXhFRUJTRXhCaEpCVVFkaGNSTWlNb0VJRkVLUm9iSEJDU016VXZBVlluTFJDaFlrTk9FbDhSY1lHUm9tSnlncEtqVTJOemc1T2tORVJVWkhTRWxLVTFSVlZsZFlXVnBqWkdWbVoyaHBhbk4wZFhaM2VIbDZnb09FaFlhSGlJbUtrcE9VbFphWG1KbWFvcU9rcGFhbnFLbXFzck8wdGJhM3VMbTZ3c1BFeGNiSHlNbkswdFBVMWRiWDJObmE0dVBrNWVibjZPbnE4dlAwOWZiMytQbjYvOW9BREFNQkFBSVJBeEVBUHdEM0hXTlRUUjlNa3ZYaWVYYXlJc2FZeXpNd1VEbjNJcG4ydlV1Mm1qL3YrS28rTU9kRmhUKzlmMmcvOGpwVy9TNmdadjJyVlA4QW9HcC8zL0ZIMnJWZitnZEgvd0IveC9oV2xSUllETiswNnQvMEQ0UjlaLzhBNjFIMmpWLytnZkIvMy84QS9yVnBVVVdBelB0R3M1NDArMi84Q0QvOFRTZmFOYXovQU1lRnFQOEF0NFAvQU1UV3BSUllETDgvV3Y4QW54dFAvQWcvL0UwZWRybmF5c3YvQUFJYi93Q0pyU1owUVpkbFVlNXhUVFBFdldWQjlXRkszbUJuZWRyMy9QbllmK0JEZi9FMG5tNi8ydE5QL3dDLzcvOEF4TmFhU3h5REtPclk5RG1uMDdlWUdSNW5pRHRiYWIvMytmOEErSm9MK0l1ME9tZjkvWC8rSnJYb29zQmo1OFNmM05MSC9BNVA4S1QvQUlxVC9xRkQ4WksyYUtMQVlwSGlicytrai9nTW4rTkJUeE9laytrai90bElmL1pxMnFLTEFjbHJlcWVJOUJzVTFDNGsweWUzVzRoaWtqamhkV0t5U0toSUpZOGpkbnAycnFMcG1TMG1aVjNNRUpDK3ZGYzU4UXgveFJseWY3dHhhdCtWeEdhNlNjYnJlUWRQbFBTaGJnWW5pMC82RHA2LzN0VHRCLzVGVS8wcmZybi9BQlVmbDBaZjcycXdmb1NmNlYwRkMzQUtLS0tZQlNNd1JTekVCUU1rbnRUWlpZNElYbGxjSkdnM016SEFBcnhQeHg4VjVMbVdiVGRHY1IyL0t0TU9yL1QycE5pYnNkWjRoK0xPbDZUTzl2WlJmYkpVT0MyN0NaK3RlZWE5OFlkWDFOUEx0ZHRqR0R6NVRIY2Z4cnpHKzFFN2lkeEp6eVNheUpiNHNlOUszY203ZXgybDc0eDFhK09MalViaVVmN1VoeFZVK0licG0zZmE1Yy85ZERYSG02YlB0UWJrNHAyUVdrZHZhK0tkUnM1REpiMzl3bVRrZ1NIbXVwMDc0bGF2RE1relhqdnprcVR3YThmTjIvR09NVk11b01CM3pTY1V3MVI5WitIUGlScG1zUWZ2bldHWUtTeWsxMnlTTElvWkdCQjdpdmkzVHRVa0RBb3hEZld2VWREK0pHcWVYYlczbVlNV0F4enl3SFNsN3lIekgwSFJXYm9XcFBxdWxSWFRwdFp2VHZXbFZKM0tDaWlpbUJ6SHhDR2ZCRi83UENmeW1RMTBrdjhBcVpQOTAxem54Qy81RVRWRDZLaC9LUmE2T1gvVXYvdW1sMUF3dkUvTjE0ZlQrOXFxZnBISWY2VjBGYzk0azUxWHcwdnJxZWZ5Z2xyb2FGdXdDaWlpbUI1VDhhdkVjOWhwbHZwTnRONWJYUUx5Z2RTbzZENlY4NlhzenFTZDNOZW4vRzI0MmVOcGxaeTVFTVlBejkzanAvbjFyeDZlWm5laGJFTlhZeVNWNUQ4eHBsQUJKd0JYUzZaNEwxTFVyTTNLSnRYdGtkYXpxVllVMWVic2JVNlVwdTBVYzFSVzdkK0V0V3RFTHRiT1ZIWEFySnQ3U2E1bThxTkdMWngwb2pWcHlWNHNjcU5TTHMwUVVWZW4waS90MTNTV3NnWDEyMVNJSU9DQ0RWUmxHV3pKbENVZDBXYlNZUXNTVDBycVBEQzNXb2FwRkRiUlBKTTdZVlVHU2E0NWZ2Q3ZwLzRHNkZwRWZoWk5hZ0lsdjVXWkpDUnpGZy9kSDRVL0l5Y2JzN3p3dGEzOWpwRU50ZVJJbXhRQjgzUDVWdTBVVUpXVml3b29vcGdjeDhRLytSQTFqMmh6K1RDdWtsLzFELzdwL2xYT2ZFUC9BSko3cmg5TFJqK1ZkRklmOUdjLzdCL2xSMUF3ZkVQUGlEd3V2L1QvQUNIOHJlV3Vpcm5OZkkvNFNqd3N2L1QxTWY4QXlBLytOZEhTVzdBS0tLS1lIeTc4YldZZkVDK0RZLzFjZVBiNUJYbDhOdTkxT3NVWXl6SEFydnZqQmVHNCtJV3JjL2NrRVkvQlFLNTN3ZGIrZnJLdnRCOHZrNTdWbFZuN09tNWRpcU1PZW9vblQrRi9Bd2puanVMOVEyT1FocjFTM2hpaWhDS2dDZ2RNVno4ZHh0STJucFd0YXpOS282NHI0N0U0cXBXbHpTUHFxT0hoU2phS0xUd1J0bjVBY2ptc3FEUXRQdDU1SklMZEZaems0V3RqTDdlZWxRbmQycm1VNXJSTTI1VVU3alRvWllpanhxd3gzRmNGNGs4R3dUQnBZVUNTWi9ocjBDVXljbGV0WXQ1TTNtRU5YUmg4UlVweXZGa1ZhTUtrYlNSNHpxR2pYR25ZTWc0OXE5ZS9aNjE4d2EzZmFKTExpTzVpODZKRC9mWHJqOEQrbGN4NHd0akpwcGxqWDduSitsWWZ3NzFGOUw4ZDZKZEljWXUwUnY4QWRZN1QraE5mWFlTczYxUG1aOHhqS0tvMUxJK3pLS0tLNlRuQ2lpaWdEbWZpSC95VHJ4QjdXTXAvOGRyb0NjMmVmV1ArbFlYeEFHZmgzNGovQU93ZE9mOEF4dzF0Uk51MHlOdldFSDlLT29HRnIzL0k0K0ZCbi9sdGNuL3lDZjhBR3Vtcmw5ZFAvRmIrRkIvdDNSLzhoVjFGSmJnRkZGRk1ENUIrTUZrYkQ0bGFyRnp0a2NUREo2N2dDZjF6VVBnTzNLcGVYamtDTmNMazlQVS8wcnBmajVOWlh2aXF6dmJOOTVNQmhsSUhCS3R4L09xbmhiUy90SGdDV05SODF5WEpJK3VQNlZ3NDJjZlliNlBRN01IQnF0dHRxVUwzeDFiMjF5VXRJak9vUEw1d0Q5SzA5SCtKMW1wMjMwRHhqMVhrVnpjOWhvMmlwNVY5RzAwL1hZT3RjL2R0WlhNMytnMnNzZlVsZDI3aXVXR0N3dFdObEYyN25YVXhXSXB1N2t2UTl6c2ZIV2lhaktrVU01RE1jQU9NVnR2ZldZWGY1aVl4azVQYXZuN1J0SXVieWFON1YvNGdNLzNUWFZhNTRkMWJUck5yaGJvc01iZUdPZWE4K3ZnS0VLaXB4bmEvYzdxTmVwS0hOS0oydXFlTnRCc28yUDIxR2Zwc1RrMXdGNzhRSTVibG1pdG1hUFBHVGcxeFUxdkpIS3l2bG5ITFlHY1ZvV0g5ak9WUzVpbnozWU54WG8wOHN3OUpjelRrZWZQSFY1eTVWYUozbGhxRnA0aTA2NGhoZjk2WWptTTlSeFhCZUhVZHZFV254b2RybTZqVUgwTzRWNkI0VzBDeWd2bHY3Rm1NWlFxY24xcmwvRE1kdmJmRTIxVzQvd0JSQnFHNWh0emtLK2NZL0N0OEU2Y1hPTU5qREdxYzR4Y3R6N0w3VVV5R2FPNGhTYUpnMGJqS3NPNHA5ZWdjSVVVVVVBWUhqbGQzZ0R4RXZycHR4LzZMYXRLeGJkb2RzM3JiS2Y4QXgwVlM4WXJ2OEU2OHZycDF3UDhBeUcxV05KYmY0YXNXOWJPTS93RGpnb0F5ZGMvNUh2d3I5THMvK1F4WFVWeSt0LzhBSSsrRmgvc1huL29DMTFGSmJzQXBrMjd5Sk52M3RweDljVStrTkQyQkh6UnFYaHFHYlFaL3QwbTJYekhaQzU1QnljVm8rQTRDUENOdEd3NURPcC83Nk5idXUyTVV1dnptNVV0YXc3aUVIVGNHNzFMcEVVTVNNc0txc1pZc0FCNjgxOHhXcXk1SFRmZTU5RkNDdXFpN0dMcVBnclQ5UXVqZHpXcGVYam5jUjBySi93Q0VIdElKUzBGcUViR0NTVDByMDFRTnZPS3pyeGtUZ2RUWEI5YnJSVmxJNkZTcHQzYU9Qc2RIaDA5eERCRXFibUJiYU85YkhpRzNMNmVxRVpQQkhGUExXMWtxWFY1ZFJRb3pmS0dZRE5hZXM2aHBnMHJ6cFprV1BidzVQSE5aM25LU205emZtakhSTFE4K2g4Tlc4L21TSkd1K1VFUG52bnJUSXZoNWErVElnU1ZSSVJ1Q3QxQXJxTGJ5WWhGTEZNazBVbklaRG11anRZMVpOdzZHdWhZMnRCMlVtWlRvVXBhdEhOYUxvMFdqV1Myc1NzRkJKK1k1TllIaDN3M2JYR282cnFKbEF2R3VaeEdBZVUrWTROZC9jcXU3NlZoeFdWb2pwY1dTTXNvbElsWWZkOVRtdWloV255eWQ5V2M4NmNYSmFiSHFmZ1dDUzM4R2FiRkt6RndoeVdQUDNqWFJWbmFFYzZIYUVEQU1ZSXJScjZlbC9EajZIejFWM20vVUtLS0swSU1ueFF1N3dscksrdGpPUC9IRFJvTGJ2Q0dtTjYyRVIvOEFJWXFUeENOM2huVlY5Yk9ZZitPR3EzaGh0L2dmUjI5ZE5oUC9BSkRGTHFCUjFyL2tvSGhZZjlNN3ovMEJLNm11VzFyL0FKS0Y0Vy82NDN2L0FLQ2xkVFNXN0FLS0tLWUhCK0tOTGtodm5uaVQ5M044ek5qdlhMMitZWGtYMHIyRjBXUmRycUdCN0VWeW5qSFRvMDA2TzRnaVZQTGI1dG94d2E4ZkY0TDRxa1dlbmhzWHRUa2NxYjNiSHpXWk5leHB1bW5rVlZIcWFleFYxUE9UaXZOL0dWdHFsMWZqN1A1anhEQVZFN1Y0ZEhES3BWNVc3SHN1ZkxDNlZ6WDFxUFFyMitTNG5sODdJMkNNa2tENlZuNmxjd0MwOG1ZbVcwWGlPTWpqanBWUFN0T3Z3WTNsMHFhVGI2RGNhM1ovT2x0ZkxHZzNHUU1FbUhwOUs3K1RrYWplNlhtQ1YwM3RjcGVHOVgwdTF0QmJCOW1XeVMzQS9DdS9zYjNiR0FHeXA2VjR6cWVrMzd5Qlk5T2tpeWNnKzFkOTRWUzV0OU5TRzRkbVpUd1c3Q3M4WmhvVzlwRjZ2b1RUbksvSTFzZGc4b2tWeU9TUWFzYVBwazE4OGR0dEpqWWpkeDBGTDRhdFRmYXhERmpLaHR6K21CWHFTUnBIOXhGWDZERmRlQndmdElxVGVpUFB4ZUs5bkxsUVJSTERDa1NEQ0lvVlI2QVUraWl2ZldoNG9VVVVVQVVkYUc3UXRRWDF0cEIvNDZhemZCN2J2aDdvUjlkTGcvOEFSUzFyYWt1N1NyeGZXQngvNDZhd1BDRG4vaFZ1aXVEeU5JaTUra1FvNmdKclgvSlEvQy8vQUZ4dk1mOEFmTWRkVlhLNjMveVVMd3IvQU5jcnovMEJLNnFwVzdBS0tLS1lDVld2N2RicXduZ2NaRG9SVm1rUFNva3JxdzA3TzU0SE5kRzNtS2x1K0RURE9wSmJHU2FyZUs0SkxYVjc2S01IOTNNLzg2NTZ4OFNKYXllVmRaSFBVMTgxWHd6bGR4M1I5UlJxV3RjMnJtYlhMU1h6TktDblBKVnFxZjhBQ1IrTjJmeTNzNGdPNXgvOWVwcGZGOWhISDhraTVxdGIrTDdUZVRJNDU5NlZKMTR3dDdPNXRQbGJ2ekY2Mm11UEwzWGlnekhyanBWbU81OHBNOEFudFdiSjRtMDh4bHc0SjlxbzJONjk1ZGJ4a2pPUVBTblNveWszS2FzUlVxTGFPcDdaOE40bGFHN25ZRHpQbFhQcDFydks0YjRaYzZWZUUvZTgwWi9LdTVyNkRDVzlrckh6bUx2N2FWd29vb3JwT1lLS0tLQUlicGQxbk92ckd3L1N1VzhHSFB3bDBnK21rb1B5anJyWkJtSng2cWE0N3dVMlBoSHBwL3U2YVIrU21qcUJZMXovQUpLQjRVLzNMd2YrT0xYVjF5bXZmOGo5NFM5L3RZLzhoaXVycExjQW9vb29BU3FHdGF0YmFGbzEzcWQyMjJDMmpMdDZuSFllNXEvWGozeHYxbVQreUp0S2liNUZpRHlZUFVuMS9EK2RhVWFUcXlzWjFhaXB4dXpoVThTU2VKTGlUVXBZd2h1bloyUmVpODR4V1pxK2h4M0k4eUxnbXMvd2ZJSHNCR2Y0V0lycTNESW5xdnBYeldLbEtsWGJpZlY0UktwUVhNZWRYWGgrL1Jqc2paeDdDcVNhUHFEUHQ4bVFldVJYcVVOd0ZZRVlJOXhWbVY0WHdRRjNZN1UxbWxXT2ppS1dXMDVPOTJlYzJYaCs3ZGh2eUI2VjNXbTJrZW4yNi9LTjJPdEtGSWtDZ1p6VnFWUUllVDJyQ3JpcDFwSlBZM2hRaFRXaDFmdzU4WVd0bnJyYUZja0kxNkRKRTVQRzRjYmZ4cjJHdmp6N1VaUEdjWGxNZjNVWkdRZWg2LzRWOUplQWZGYTY3cGkydDFLdjlvUURERG9YWHMzK05mVjRmQ3lXRWpWanNmSTRyRXgrdVNwUDVIWTBVVVZBd29vb29BUS9kUDByaVBCbWYrRlAyby91Mk13NDl0NHJ1SzRqd1J6OEtJVjlJTGxmeWVRVXVvRnZ4RHg0ODhJbi9idXgvd0NRcTZ5dVI4VE9FOGNlRDJQVHpyb2YrUVRYU3RjK2dvU2JZTnBGaW1QTWlkVCtGVkduWTlUaXVJOFRlUGJUVFBNdDdGaGMzZlRqN3FIM1A5SzZhT0duVmx5eE9lcmlJVW84MGpTOForTlkvRDltVWhaV3ZaUmlKT3VQOW8rMWVJYWpOY2FwQmRHNW1hV1NVRm5aamtrbXBidWE1djd4N3U4a01rOGh5V0pxT0pNVGxTTTdoWDAyRndVS0VMZFh1Zk80ckdTclM1dWkyT044UFR2cCtvU1dzaEkrYml2UTdXUlpvNjRqVmRQOHU2UzRRNFlPUWE2SFNabkFRTURraXZnOCt3RG8xWDJQdjhreGlyVVVia2RtcnNlbk5XVTAzR1NjZTFNUkdQSU9LbFBuSGplYStYZCs1OUJjak1NY0p5eHJuL0VHckxhV3o3RDgyTVZzWGhhS0ZuSjZDdk05YnVKYnVmeWx5UzdZQXIwTUJoL2FWRTJjbUxyZXpwdGxqd3ZCSmNYOGw0LzhXY0d1eDB6VkxuVGRTanU3U1VwTkEyUVIvSSsxWjJqMmlXZHVxanBISGduM3FlMGpQbU94L2lOZnEyRHd5cFVGVGZ6UHl6RjRoMWEwcWw5dGo2RzhNK0s0UEVHbXBPb0N6QVlsakIrNmY4SzMxbVJ1K0Q3MTg5NlBxRjFvOTBzOW81VWo3eTltRmVzK0h2RkZ2clNpTW95VGo3eTR5UHpyeGNibDdwTnloOEo2V0N6SlZseVMrSTYraXF5YmdPRFVva1BjVjViaWVxcElrcmp2QWcvNHQwaWVqM2EvbE5JSzdBTUNLNUh3RHo0SmtRL3czbDh1UCszaVdvZTVRenhkeDR2OEhuL3A1dUIvNUFhdWdQSzFnZU1NanhSNFFQOEEwK3pEL3dBZ1BXOXpqRmFVK3BuTWl5R3lyRGdqR0s4OThUZUFqSmN5WHVtQUJuT1hpUFRQdFhvTExoODA0cG5yWFpScnlveTVvSEpXb1FyUjVabmhzMmpYMXMyMmF6bEh2dHlLenJ0RFpmdlpsTVlIZGhYdmMxb2tnd1IrbFk5OTRXc2I1V1dhM1J3ZlVWNnNNMHY4U1BMbGxTVHZHUjRIZmxiMnorMHhuS3V4Q25IY1l6L090UHc2RXZJRVAvTFJEaHE2YnhiNFdqMGF3Z2UzamI3T0xobWtDak8wTUFNLytPMWdhQkVQK0VqbWdzWTNhM1pHazVISVVIZ244Q0s1YzVvckY0TjFJN3hQVXlXdjlWeFNwUzJaMU1kb01BVTc3RWQ0STRGU1NiZy95OUttU2ZLZ0hyWDVxNmJQMEM1a2FuYWJvSkU3c01WNTNjYWNpYW91QmtxYzE2cGRFRlNTT3RjenBHbFhtcDZ4ZC9aNE14dURDMGpMOHFBbmsvWGcxOUZ3OVFjcS9NOW82bmlaOWlGVHd6aXQ1YUlwMjl1Z2pqaWRpalRMbE9PQ0FjYy9qbjhxMXJidzdlR1BNY1cvM0JyMGl4OE0ya01hL3VRZHFoRnlPZ0grYy9qV3F1bXBIRGhVQUhzSyt6bG1UVDkxSHhDeTFTWHZNODkwM3docU4zSUNVRWFkQ3pHdTkwRFE0TkZZeHcvTTc4dTU2azFxV1Z2NWNRQUdLdFJ3L3ZDMWVmaU1iT3JkUFk2OE5nYWRGM2p1VGc0Rkx2cGhwVUdhODg5QWt5TVpybHZBQi80cGUvVCs1cWQrdi9reEpYVmNZeFhLZUErTkUxcFA3dXNYNC84QUlySCt0WnlOSWllTlArUmc4SXQvMUVaQitjRWxkQU9uU3NIeHJ4cTNoTnZUVlNQemdscmVYcFZVK3BNOXdaY2dIRlBDK3RJdkl4VHgwclM1RmhoVGltbE1kcW14bW5CYVhNRmpLMUN5UzV0MlhZR0JHQ0NPQ0s1bnc5NFdzYkR4SGMzc1kyZVpBWXZLSTQ1SUp4K1Zkd1Z3Y0hwV2RkMmV5ZFpVNE9lb3JvcDFueXVuZlJtTXFhNWxPMnFPSjFYVHZzVjlKRi9EMVUrMVovbHFtU2E3VFhySTNscDU2RDk3RU9SNml1TG1Wbkt3cU11ekJRQjN6WHoySnd2TFUwNm4xT0R4ZlBTMWVxSjdLQzNtbGk4NE03VFNlVkRHdjhSQXlXUHNvNXJzN093aWdqU0tLTlVqWG9xajlheXZEdW5LTDY0bFVoNDdRZlpWYjFmNzBoSDRrRC9nTmRRcFJXQzU1UGF2YXc5SlllbW9yZnFlRGlxN3hGVnk2ZEJ5cndBS2syWlhwVDFqNHB4WkkrR2RWejJKeFE1R1NRUXBoY1ZMdHdLUlpvUVA5YkgvQU45Q2xNMEIvd0NXcWY4QWZRck55dXkwaHUzSXA0R0Z4VEZtaFA4QXkxVC9BTDZGSzA4SUEvZlIvd0RmUW91RmhUWExlQitMRHhFdjkzV3J6OVd6L1d1bU04T1A5YkgvQU45Q3VWOEZUUnJGNG9WcEZIL0U2dVNNbnFDcUgrdFRJcUpyZUk5R0d1UTJmazNvdHJpenVCY1F5QUJzTUZLOGo2TWFvRFN2RWdBQzYvWnRqdTF0L2dhS0tWaHNCcHZpbFdKWFdOUGI2MngveHA0dFBGZy81ZjhBUzIvN1lzUDYwVVV0ZTRXUWVUNHZYcE5wRGZWWEg5YVArS3ZVNXhwRGY4Q2NVVVVuZnVGa0l6ZUxpZWJiU1QvMjJjZjBwREo0dFpkcHNkS2JIZjdRMytGRkZGMnVvV1JFeDhWbi9tRzZZZlgvQUVwdi9pYTVsL0Qzak1hbDlyaHROS1VLNWRGTndlRDI3ZGpSUlNiYjNMaTNGTkkwdEVzL0Z1ajZSRlpOcGxoSzZGbWFUN1dSdllzU1Q5MzNyUmp1UEVxUDVoME96WnZVWHcvK0pvb3FwVkp5ZDJ6T01JeFZraXlOVzhTRHJvRnYrRjZ2K0ZjUDR5dTdtNTFxMGZWTEFXMjJISGxwTUpOd3llY2pHS0tLU2JiS3NqQ1p0S3d4QzNXU1JnY1lBNzkvODRwSkcwdlkzbFIzTy9CeHZJeG5ISFQzb29xZ0hlWnBpWEt5TERKSkVTMjZOejA0NDZFZC9mdDcxWjMrSGtMYlk3MXcwWkEzWXlyZXZCSDlldEZGQUVXN1F4R3Z5WHhmSjNjcUJqdGlvTDA2YVVVV0tYUWJQekdabHhqOFB3b29vQS8vMlE9PR4HVmlzaWJsZWdkZAIFDw8WAh8ABQpaZWVsIHBhdGVsZGQCCw8WAh8CaGQCEQ8WAh8CaGQCEw8WAh8CZ2QCGw8WAh4FY2xhc3MFBmFjdGl2ZWQCIQ8WAh8CaGQCJQ8WAh8CaGQCLQ8WAh8CaGQCBQ9kFgYCAQ8PFgIfAmhkZAIDD2QWBGYPZBYCAgEPZBYCAgEPDxYCHwAFDC0tLS0tLS0tLS0tLWRkAgEPZBYEAgEPZBYCAgEPDxYCHwAFDC0tLS0tLS0tLS0tLWRkAgMPZBYCAgEPDxYCHwAFDC0tLS0tLS0tLS0tLWRkAgcPZBYCAgEPDxYGHwAFHE9wcHNzc3MhIERhdGEgbm90IGF2YWlsYWJsZS4eCENzc0NsYXNzBQlSZXN1bHQgTkYeBF8hU0ICAmRkZLLnepNOsQ1pzbuqd1uFBQ+YQkzUFeatg+EzHr8F1pgn" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1AFC970A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKiqHqJdZtHRec5vPPNitLGoyQ2JKqr0L8AN+dKeC2Y2wqceN++OlGkO2Tf+S8ItcnP2hfRHt06VWHDIBhHsTTT" />
+</div>
+
+<header class="header black-bg" id="mainheader">
+			  <div class="sidebar-toggle-box">
+				  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+			  </div>
+			<!--logo start-->
+		   <div>
+				 <a href="index.html" class="logo">
+	  		<img src="images\gtuLogo.png" width="40" height="40" alt="Logo" />
+			<b>Gujarat Technological University</b></a>
+<br />
+
+
+				<ul class="nav pull-right top-menu">
+            <li>
+
+                 <table >
+                    <tr>
+                        <td style="display:none"><a href="../Feedback.aspx" style="margin: 15px; color: #FFFFFF">Query/Feedback</a></td>
+                        <td>
+                            <a id="ctl00_hd1_lnklogout" href="javascript:__doPostBack(&#39;ctl00$hd1$lnklogout&#39;,&#39;&#39;)" style="color: #f2f2f2; font-size: 12px; border-radius: 4px; -webkit-border-radius: 4px; border: 1px solid #64c3c2 !important; padding: 5px 15px; margin-right: 15px; background: #424a5d; margin-top: 5px;"><b>Logout</b></a></td>
+                    </tr>
+                </table>
+            </li>
+
+        </ul>
+
+			</div>
+		</header>
+
+    <div>
+
+<div id="sidebar" class="nav-collapse ">
+    <!-- sidebar menu start-->
+    <ul class="sidebar-menu" id="nav-accordion" style="line-height: 20px;">
+        <h5 class="centered">
+            <span id="ctl00_sdm1_lbl_MapNumber">206400319215</span></h5>
+        <p class="centered">
+            <a href="index.html">
+                <img id="ctl00_sdm1_img_pro" class="img-circle" src="data:image/jpg;base64,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" style="height:90px;width:100px;border-width:0px;" />
+
+            </a>
+            <a href="../ManageProfile03.aspx" style="text-align: right; vertical-align: bottom;">
+                <img src="icon-edit.gif" alt="Edit" /></a>
+        </p>
+        <h5 class="centered">
+
+            <span id="ctl00_sdm1_lbl_Name">Zeel patel</span>
+        </h5>
+        <li class="sub"><a href="index.html" id="ctl00_sdm1_Li_Home"><i class="fa fa-home"></i><span>Home</span> </a></li>
+
+        <li class="sub"><a href="Certificate_dashboard.html" id="ctl00_sdm1_A1"><i
+            class="fa fa-certificate"></i>Certificate Request</a></li>
+        <li class="sub"></li>
+        <li class="sub"><a href="Examform.html" id="ctl00_sdm1_Li_examform"><i class="fa fa-certificate"></i>Examform</a></li>
+
+
+
+
+
+
+
+
+
+
+
+        <li class="sub"><a href="Anssheet.html" id="ctl00_sdm1_A4"><i class="fa fa-certificate"></i>Answer Sheet View</a> </li>
+
+        <li class="sub"> </li>
+        <li class="sub"><a href="convocation/Convocation_Dashboard.html" id="ctl00_sdm1_hr_convo_db"><i class="fa fa-graduation-cap"></i>Convocation</a> </li>
+        <li class="sub"> </li>
+
+
+
+        <li class="sub"></li>
+
+
+        <li class="sub"><a href="RecheckHistory.html" id="ctl00_sdm1_Li_RCHistory"><i
+            class="fa fa-check"></i>Recheck/Reassess History </a></li>
+        <li class="sub"><a href="Degree.html" id="ctl00_sdm1_Li_Degree" class="active"><i class="fa fa-graduation-cap"></i>Degree Verification</a> </li>
+        <li class="sub"><a href="MarksheetRequestTrack.html" id="ctl00_sdm1_Li_Marksheet">
+            <i class="fa fa-road"></i>Marksheet Tracker </a></li>
+        <li class="sub"><a href="CertificateRequestTrack.html" id="ctl00_sdm1_Li_Certificate">
+            <i class="fa fa-truck"></i>Certificate Tracking </a></li>
+
+
+
+
+
+        <li class="sub"></li>
+        <li class="sub" style="display: none;"><a href="studentprofile.html" id="ctl00_sdm1_Li_Profile"><i class="fa fa-dashboard"></i><span>Profile</span> </a></li>
+        <li class="sub"></li>
+        <li class="sub"><a href="StudentResultDisplay.html" id="ctl00_sdm1_Li_Result">
+            <i class="fa fa-certificate"></i>My Results </a></li>
+
+        <li class="sub"><a href="https://www.students.gtu.ac.in/studhist.aspx" id="ctl00_sdm1_Li_GRHistory" target="_blank"><i class="fa fa-trophy"></i>Grade History </a>
+        </li>
+        <li class="sub"><a href="PaymentStatus.aspx" id="ctl00_sdm1_A2"><i class="fa fa-bookmark"></i>Check Payment Status </a>
+        </li>
+         <li class="sub">
+        </li>
+        <li class="sub"><a href="ViewLog.aspx" id="ctl00_sdm1_Li_Logs"><i class="fa fa-bookmark"></i>View my last 10 Logs </a></li>
+    </ul>
+    <!-- sidebar menu end-->
+</div>
+
+
+
+     <div id="main-content">
+        <div class="wrapper site-min-height">
+            <div class="row mt">
+             <div class="col-lg-10">
+            <div class="showback">
+
+            <table align="center"><tr>
+                                <td style="color: #FF3300; font-weight: bold;">"Note: It is the Web copy only for your reference and will not be used for any documentation purposes".
+                                </td>
+                            </tr>
+                                           <tr >
+                                        <td colspan=2>
+                                               <H3><img src="assets/img/gtuLogo.png" width="40" height="50" alt="Logo" style="margin: 5px" />GUJARAT TECHNOLOGICAL UNIVERSITY</H3>
+                                    <h4 align="center" style="color: #000000; font-weight: bold;">Degree Verification</h4>
+
+                                    </td>
+                                    </tr>
+
+
+              </table>
+
+
+
+
+
+                    <table class="table" >
+                <tr>
+                    <td id="ctl00_ContentPlaceHolder1_tdinfo" colspan="2" align="center">
+                        <table class="tblLast">
+                            <tr>
+                                <td align="center" class="Result NR">
+                                    <span id="ctl00_ContentPlaceHolder1_lblmsg" class="Result NF">Oppssss! Data not available.</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    </div>
+    </form>
+    <!--footer start-->
+
+<footer id="mainfooter" class="site-footer">
+		  <div class="text-center">
+			  2018 - gtu.ac.in
+			  <a href="#" class="go-top">
+				  <i class="fa fa-angle-up"></i>
+			  </a>
+		  </div>
+	  </footer>
+
+    <!--footer end-->
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="https://student.gtu.ac.in/assets/js/jquery.js"></script>
+    <script src="https://student.gtu.ac.in/assets/js/jquery-1.8.3.min.js"></script>
+    <script src="https://student.gtu.ac.in/assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="https://student.gtu.ac.in/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="https://student.gtu.ac.in/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="https://student.gtu.ac.in/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="https://student.gtu.ac.in/assets/js/jquery.sparkline.js"></script>
+    <!--common script for all pages-->
+    <script src="https://student.gtu.ac.in/assets/js/common-scripts.js"></script>
+    <script type="text/javascript" src="https://student.gtu.ac.in/assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="https://student.gtu.ac.in/assets/js/gritter-conf.js"></script>
+    <!--script for this page-->
+    <script src="https://student.gtu.ac.in/assets/js/sparkline-chart.js"></script>
+    <script src="https://student.gtu.ac.in/assets/js/zabuto_calendar.js"></script>
+    <script type="application/javascript">
+		$(document).ready(function () {
+			$("#date-popover").popover({html: true, trigger: "manual"});
+			$("#date-popover").hide();
+			$("#date-popover").click(function (e) {
+				$(this).hide();
+			});
+
+			$("#my-calendar").zabuto_calendar({
+				action: function () {
+					return myDateFunction(this.id, false);
+				},
+				action_nav: function () {
+					return myNavFunction(this.id);
+				},
+				ajax: {
+					url: "show_data.php?action=1",
+					modal: true
+				},
+				legend: [
+					{type: "text", label: "Special event", badge: "00"},
+					{type: "block", label: "Regular event", }
+				]
+			});
+		});
+
+
+		function myNavFunction(id) {
+			$("#date-popover").hide();
+			var nav = $("#" + id).data("navigation");
+			var to = $("#" + id).data("to");
+			console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+		}
+    </script>
+</body>
+</html>
